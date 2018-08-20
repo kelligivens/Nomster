@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
-  
   devise_for :users
-  devise_scope :user do
-    get '/users/sign_out' => 'devise/sessions#destroy'
-  end
-  
   root 'places#index'
-  resources :places
+  resources :places do
+    resources :comments, only: :create
+  end
 end
+
