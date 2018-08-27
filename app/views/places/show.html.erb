@@ -30,12 +30,6 @@
   
     <div id="map"></div>
   <% end %>
-  
-  <%= simple_form_for @photo, url: "#" do |f| %>
-    <%= f.input :photo %>
-    <%= f.input :caption, as: :select, collection: Photo::CAPTION %>
-    <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
-  <br />
     
     
   <div class="float-right">
