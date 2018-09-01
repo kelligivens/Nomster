@@ -28,6 +28,7 @@ body {
 .navbar {
   background: image_url('dark-grey-terrazzo.png');
   box-shadow: 0px 1px 3px #2a2a2a;
+  margin-bottom: 0;
 }
 
 .navbar-inverse .navbar-brand {
@@ -97,6 +98,11 @@ blockquote p {
         object-fit: contain;
 }
 
+.carousel-item.active, 
+.carousel-item-next, 
+.carousel-item-prev {
+  display: block;
+}
 
 
 
