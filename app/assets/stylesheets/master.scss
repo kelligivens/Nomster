@@ -107,12 +107,16 @@ blockquote p {
 .digg_pagination {
   background: white;
   cursor: default;
-  /* self-clearing method: */ }
+  text-align: center;
+  padding: 0.3em;
+  /* self-clearing method: */ 
+  }
+
 .digg_pagination a, .digg_pagination span, .digg_pagination em {
     padding: 0.2em 0.5em;
     display: block;
-    float: center;
-    margin-right: 1px; 
+    float: left;
+    margin-right: 1px;
 }
 .digg_pagination .disabled {
     color: #999999;
@@ -159,6 +163,7 @@ blockquote p {
   *:first-child + html .digg_pagination {
     overflow: hidden; 
 }
+
 
 
 
