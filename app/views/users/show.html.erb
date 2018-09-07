@@ -1,12 +1,11 @@
 <div class="booyah-box">
   <div class="row">
-    <div class="col-4">
+    <div class="col-5">
       <h4><%= @user.comments.count %> total comments</h4>
-      <br />
       <h4><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews</h4>
     </div> 
     
-    <div class="col-8">
+    <div class="col-7">
       <%= image_tag 'user.png' %>
       <h4><%= @user.email %></h4>
       <h6>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h6>
