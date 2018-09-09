@@ -8,4 +8,12 @@ class NotificationMailer < ApplicationMailer
     mail(to: @place_owner.email,
          subject: "A comment has been added to #{@place.name}")
   end
+  
+  def photo_added(photo)
+    @place = photo.place
+    @place_owner = @place.user
+    
+    mail(to: @place_owner.email,
+         subject: "A photo has been added to #{@place.name}")
+  end
 end
