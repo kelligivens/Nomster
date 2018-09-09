@@ -53,13 +53,19 @@
         <small><%= place.comments.last.user.email %></small>
       </blockquote>
     </div>
-  <% end %>
- </div>
+   <% end %>
+   <div class="col-8 offset-2 text-center">
+      <% if place.photos.present? %>
+        <%= image_tag place.photos.last.picture, class: "img-fluid", alt:"Responsive image" %>
+      <% end %>
+    </div>
+  </div>
 <% end %>
+
   
   <div class="text-center">
     <div class="digg_pagination">
-      <%= will_paginate @places %>
+      <%= will_paginate @places :container => false %>
     </div>
   </div>
 
