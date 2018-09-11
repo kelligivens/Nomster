@@ -89,7 +89,7 @@
   <% end %>
   
   <!-- Photo Modal -->
-<div class="modal fade" id="myPhotoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myPhotoModal" tabindex="-1" role="dialog" aria-labelledby="myPhotoModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -101,12 +101,12 @@
       <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
         <div class="modal-body">
           <%= f.input :picture %>
-          <%= f.file_field :cap %>
+          <%= f.file_field :caption %>
         </div>
-        <div class="modal-footer">
+       <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
-        </div>
+       </div>
       <% end %>
      </div>
     </div>
@@ -116,7 +116,7 @@
 <div class="col-10 offset-1">
   <h1 class="float-left">Photos</h1>
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
+  <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myPhotoModal">
     Upload a photo
   </button>
 </div>
